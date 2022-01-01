@@ -1,0 +1,74 @@
+[
+   {
+       "categories": "dinosaur",
+       "books": [{
+            "id": 1,
+            "name": "dino-book1",
+            "desc": "this is book 1"
+            },
+            {
+                "id": 2,
+                "name": "dino-book2",
+                "desc": "this is book 2"
+            },
+            {
+                "id": 3,
+                "name": "dino-book3",
+                "desc": "this is book 3"
+            },
+            {
+                "id": 4,
+                "name": "dino-book4",
+                "desc": "this is book 4"
+            }],
+        "id": "catid1"
+    },
+    {
+        "categories": "human",
+        "books": [{
+             "id": 1,
+             "name": "human-book1",
+             "desc": "this is book 1"
+             },
+             {
+                 "id": 2,
+                 "name": "human-book2",
+                 "desc": "this is book 2"
+             },
+             {
+                 "id": 3,
+                 "name": "human-book3",
+                 "desc": "this is book 3"
+             },
+             {
+                 "id": 4,
+                 "name": "human-book4",
+                 "desc": "this is book 4"
+             }],
+        "id": "catid2"
+     },
+     {
+        "categories": "dog",
+        "books": [{
+             "id": 1,
+             "name": "dog-book1",
+             "desc": "this is book 1"
+             },
+             {
+                 "id": 2,
+                 "name": "dog-book2",
+                 "desc": "this is book 2"
+             },
+             {
+                 "id": 3,
+                 "name": "dog-book3",
+                 "desc": "this is book 3"
+             },
+             {
+                 "id": 4,
+                 "name": "dog-book4",
+                 "desc": "this is book 4"
+             }],
+        "id": "catid3"
+     }
+]

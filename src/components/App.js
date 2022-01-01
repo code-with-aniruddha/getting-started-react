@@ -1,29 +1,28 @@
-import React from "react";
-import SearchBox from "./SearchBox";
-import JsonPlaceHolderApi from "../api/JsonPlaceHolderApi";
-import CommentList from "./CommentList";
+import React, {useState, useEffect} from "react";
+import BookList from "./BookList";
+import Books from "../data/books.json";
+import Categories from "./Categories";
 
-class App extends React.Component{
-    state = {comments: [], postId: ''}
+const App = ()=>{
+    const [books, setBooks] = useState(Books);
+    const [selectedCategory, setSelectedCategory] = useState('');
 
-    onInputValChange = async (postid)=>{
-        const commentsResponse = await JsonPlaceHolderApi.get(`/posts/comments`,{
-            params:{query:postid}
-        });
-        this.setState({comments: commentsResponse.data, postId: postid});
-    }
+    useEffect(()=>{
+        if(selectedCategory){
+            const updatedbooks = books.filter(book=> book.categories===selectedCategory);
+            setBooks(updatedbooks);
+        } else {
+            setBooks(Books);
+        }
+        
+    }, [selectedCategory]);
 
-
-    render(){
-        return (
-            <div>
-                App works
-                <SearchBox postId={this.state.postId} onChange={this.onInputValChange}/>
-                <CommentList comments={this.state.comments}/>
-            </div>
-            
-        );
-    }
+    return (
+        <div>
+            <Categories onSetSelectedCategory={setSelectedCategory} categories={Books}/>
+            <BookList books={books}/>
+        </div>
+    );
 }
 
 export default App;
